@@ -1,0 +1,18 @@
+scan_with_sonarqube:
+  tags:
+    - sonarqube
+  stage: scans
+  timeout: 10m
+  image: harbor.xxxxxxxxx.xxx/xxxx/sonarqubecicd@sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
+  before_script:
+      - echo "Starting static code analysis with Sonarqube!"
+  script:
+    - /opt/sonar-report/init.sh
+    - /opt/sonar-report/sonarscript.py
+  after_script:
+    - echo "Scanner completed."
+  artifacts:
+    when: always
+    paths:
+      - sonarscan.csv
+    expire_in: 1 week
