@@ -5,7 +5,8 @@ Used debian parent image
 docker pull debian:latest
 ```
 
-Create **app** directory, enter it, put everything here we will need to install in the container:  
+Create **app** directory, enter it, put everything here  
+We will need to install these in the container:  
 - custom scripts  
 - download [sonar-scanner-cli](https://binaries.sonarsource.com/?prefix=Distribution/sonar-scanner-cli/) and extract it and rename directory to sonar-scanner  
 - download [sonarqube](https://www.sonarsource.com/products/sonarqube/downloads/) and extract it and rename directory to sonarqube  
