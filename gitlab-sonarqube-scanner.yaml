@@ -3,7 +3,7 @@ scan_with_sonarqube:
     - sonarqube
   stage: scans
   timeout: 10m
-  image: harbor.xxxxxxxxx.xxx/xxxx/sonarqubecicd@sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
+  image: harbor.xxxxxxxxx.xxx/xxxx/sonarqubecustom@sha256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
   before_script:
       - echo "Starting static code analysis with Sonarqube!"
   script:
